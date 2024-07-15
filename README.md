@@ -1,1 +1,1 @@
-# poc_server
+# This repo is for the telegram server code
