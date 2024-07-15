@@ -1,11 +1,6 @@
 from fastapi import FastAPI
-
+from routes import mongo_atlas_router,simple_commands_router
 server = FastAPI()
 
-@server.get("/start")
-def hello_text():
-    return {"Message": "Hello ,I am your bot!"}
-
-@server.get("/test")
-def info():
-    return {"Message": "It's a bot test!"}
+server.include_router(simple_commands_router.router)
+server.include_router(mongo_atlas_router.router)
