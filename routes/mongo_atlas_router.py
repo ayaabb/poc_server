@@ -7,7 +7,7 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 router = APIRouter()
 
-load_dotenv('mongo_uri.env')
+load_dotenv()
 
 MONGODB_URI = os.getenv("MONGODB_URI")
 try:
